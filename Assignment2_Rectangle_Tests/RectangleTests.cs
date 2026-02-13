@@ -197,9 +197,105 @@ namespace Assignment2_Rectangle_Tests
             // Assert
             Assert.That(actual, Is.EqualTo(expected), "Test Failed - SetWidth to 4500");
         }
-        /*Whoever is next, post your code here.Please be sure the two curly braces
-        you now see below are after your code to ensure the class and namespace are closed.👇🏼*/
+        //Spencer's 6 tests
 
+        // ========================
+        // GetPerimeter Tests
+        // ========================
+        
+        // Test perimeter of rectangle with minimum values (1,1)
+        [Test]
+        public void GetPerimeter_Length1Width1_Output4()
+        {
+            // Arrange
+            Rectangle rect = new Rectangle(1, 1);
+            int expected = 4;
+
+            // Act
+            int actual = rect.GetPerimeter();
+
+            // Assert
+            Assert.That(actual, Is.EqualTo(expected), "Test Failed - Perimeter should be 4");
+        }
+
+        // Test perimeter of rectangle with normal values (100,50)
+        [Test]
+        public void GetPerimeter_Length100Width50_Output300()
+        {
+            // Arrange
+            Rectangle rect = new Rectangle(100, 50);
+            int expected = 300;
+
+            // Act
+            int actual = rect.GetPerimeter();
+
+            // Assert
+            Assert.That(actual, Is.EqualTo(expected), "Test Failed - Perimeter should be 300");
+        }
+
+        // Test perimeter of rectangle with large boundary values (4500, 4500)
+        [Test]
+        public void GetPerimeter_Length4500Width4500_Output18000()
+        {
+            // Arrange
+            Rectangle rect = new Rectangle(4500, 4500);
+            int expected = 18000;
+
+            // Act
+            int actual = rect.GetPerimeter();
+
+            // Assert
+            Assert.That(actual, Is.EqualTo(expected), "Test Failed - Perimeter should be 18000");
+        }
+
+        // ========================
+        // GetArea Tests
+        // ========================
+       
+        // Test area of rectangle with minimum values (1,1)
+        [Test]
+        public void GetArea_Length1Width1_Output1()
+        {
+            // Arrange
+            Rectangle rect = new Rectangle(1, 1);
+            int expected = 1;
+
+            // Act
+            int actual = rect.GetArea();
+
+            // Assert
+            Assert.That(actual, Is.EqualTo(expected), "Test Failed - Area should be 1");
+        }
+
+        //Test area of rectangle with normal values (100, 50)
+        [Test]
+        public void GetArea_Length100Width50_Output5000()
+        {
+            // Arrange
+            Rectangle rect = new Rectangle(100, 50);
+            int expected = 5000;
+
+            // Act
+            int actual = rect.GetArea();
+
+            // Assert
+            Assert.That(actual, Is.EqualTo(expected), "Test Failed - Area should be 5000");
+        }
+
+        //Test area of rectangle with large boundary values (4500, 4500)
+        [Test]
+        public void GetArea_Length4500Width4500_Output20250000()
+        {
+            // Arrange
+            Rectangle rect = new Rectangle(4500, 4500);
+            int expected = 20250000;
+
+            // Act
+            int actual = rect.GetArea();
+
+            // Assert
+            Assert.That(actual, Is.EqualTo(expected), "Test Failed - Area should be 20250000");
+        }
 
     }
 }
